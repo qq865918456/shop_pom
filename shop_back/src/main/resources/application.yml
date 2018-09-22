@@ -1,0 +1,26 @@
+dubbo:
+  application:
+    name: shop_back
+  registry:
+    address: zookeeper://192.168.111.130:2181
+  consumer:
+    check: false
+    timeout: 1000
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML5
+fdfs:
+  connect-timeout: 600
+  so-timeout: 1500
+  pool:
+    jmx-enabled: false
+  thumb-image:
+    width: 200
+    height: 200
+  tracker-list:
+    - 192.168.111.130:22122
+image:
+  path: http://192.168.111.130/

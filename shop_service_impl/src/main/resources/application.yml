@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql:///shop
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+dubbo:
+  application:
+    name: shop_service
+  registry:
+    address: zookeeper://192.168.111.130:2181
+  consumer:
+    timeout: 6000
+mybatis:
+  type-aliases-package: com.qf.entity
+  mapper-locations: classpath*:com/qf/shop/dao/mapper/*.xml
